@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#f97197"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_drawer_home" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/bili_default_avatar" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:text="未登录"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="21dp"
+            android:src="@drawable/ic_menu_top_game_center" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="21dp"
+            android:src="@drawable/ic_toolbar_menu_download" />
+
+        <ImageView
+            android:id="@+id/ivMenuSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="21dp"
+            android:src="@drawable/ic_toolbar_menu_search" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#6b000000"
+        android:visibility="gone" />
+
+    <com.example.cpl.ClipLayout
+        android:id="@+id/cl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/ic_arrow_back_black" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/ic_scan" />
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="搜索视频、番剧、up主或av号"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/ivSearchQuery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ic_search_query" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llHistory"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <ListView
+                    android:id="@+id/lvAuto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+                </ListView>
+
+                <TextView
+                    android:id="@+id/tvClean"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="清除搜索历史" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.example.cpl.ClipLayout>
+
+</FrameLayout>
