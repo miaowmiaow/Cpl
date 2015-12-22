@@ -12,23 +12,22 @@ import android.widget.RelativeLayout;
 import com.nineoldandroids.animation.ValueAnimator;
 import com.nineoldandroids.animation.ValueAnimator.AnimatorUpdateListener;
 
-public class ClipLayout extends RelativeLayout {
+public class MaterialLayout extends RelativeLayout {
 
-	static final String TAG = "ClipLayout";
 	private int radius = 0;
 	private int cx = 0;
 	private int cy = 0;
 	private int duration = 200;
 
-	public ClipLayout(Context context) {
+	public MaterialLayout(Context context) {
 		this(context, null);
 	}
 
-	public ClipLayout(Context context, AttributeSet attrs) {
+	public MaterialLayout(Context context, AttributeSet attrs) {
 		this(context, attrs, 0);
 	}
 
-	public ClipLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+	public MaterialLayout(Context context, AttributeSet attrs, int defStyleAttr) {
 		super(context, attrs, defStyleAttr);
 		setOnTouchListener(new OnTouchListener() {
 

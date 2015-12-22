@@ -28,7 +28,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	private View mVBg;
 
-	private ClipLayout cl;
+	private MaterialLayout ml;
 	private ImageView mIvBack;
 	private EditText mEtSearch;
 	private ImageView mIvSearchQuery;
@@ -55,7 +55,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		mVBg = (View) findViewById(R.id.vBg);
 
-		cl = (ClipLayout) findViewById(R.id.cl);
+		ml = (MaterialLayout) findViewById(R.id.ml);
 		mIvBack = (ImageView) findViewById(R.id.ivBack);
 		mEtSearch = (EditText) findViewById(R.id.etSearch);
 		mIvSearchQuery = (ImageView) findViewById(R.id.ivSearchQuery);
@@ -126,19 +126,19 @@ public class MainActivity extends Activity implements OnClickListener {
 	}
 
 	private void clickMenuSearch() {
-		cl.setVisibility(View.VISIBLE);
+		ml.setVisibility(View.VISIBLE);
 		mVBg.setVisibility(View.VISIBLE);
-		cl.push(mIvMenuSearch);
+		ml.push(mIvMenuSearch);
 	}
 
 	private void clickBack() {
-		cl.pop();
+		ml.pop();
 		mEtSearch.setText("");
 		new Handler().postDelayed(new Runnable() {
 
 			@Override
 			public void run() {
-				cl.setVisibility(View.GONE);
+				ml.setVisibility(View.GONE);
 				mVBg.setVisibility(View.GONE);
 				mLlHistory.setVisibility(View.GONE);
 			}
